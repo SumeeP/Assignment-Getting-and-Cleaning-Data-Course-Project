@@ -15,13 +15,18 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 #### To Do
 Create one R script called _run_analysis.R_ that does the following.
 
-1. Merges the training and the test sets to create one data set.
+1. Merges the training and the test sets to create one data set.<br\>
+
   _: it is done by means of "cbind" and "rbind" for test and training data sets_
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-  _: it is done using "grep"_
-3. Uses descriptive activity names to name the activities in the data set
-  _: it is done using "factor" (levels and labels definition)_
-4. Appropriately labels the data set with descriptive variable names.
-  _:it is done using "grep" and "colnames"_
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-  _: it is done using "group_by", "summarise_all" of dplyr package_
+2. Extracts only the measurements on the mean and standard deviation for each measurement.<br\>
+
+_: it is done using "grep"_
+3. Uses descriptive activity names to name the activities in the data set <br\>
+
+_: it is done using "factor" (levels and labels definition)_
+4. Appropriately labels the data set with descriptive variable names.<br\>
+
+_:it is done using "grep" and "colnames"_
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.<br\>
+
+_: it is done using "group_by", "summarise_all" of dplyr package_
