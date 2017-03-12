@@ -21,14 +21,13 @@ train.df.activity       <- read.table("UCI HAR Dataset/train/y_train.txt")
 train.subject           <- read.table("UCI HAR Dataset/train/subject_train.txt")
 
 #Merges the training and the test sets to create one data set.
-test.df$Category        <-rep("test",2947)
+test.df$Category        <-rep("test",2947) # it is not requried in this project
 test                    <-cbind(test.df,test.df.activity,test.subject)
 
-train.df$Category        <-rep("train",7352)
+train.df$Category        <-rep("train",7352)# it is not requried in this project
 train                   <-cbind(train.df,train.df.activity,train.subject)
 
 total.df <- rbind(test,train)
-colnames(total.df)
 
 
 #Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -40,7 +39,7 @@ total.df.m.std <- total.df[,mean.std]
 colnames(total.df.m.std) <- feature[mean.std,2] 
 total.df.m.std$activity <-total.df[,563]
 total.df.m.std$subject <-total.df[,564]
-v.name <- names(total.df.m.std)
+
 
 #Uses descriptive activity names to name the activities in the data set
 total.df.m.std$activity <- factor(total.df.m.std$activity, levels = activity.label[,1], labels = activity.label[,2])
