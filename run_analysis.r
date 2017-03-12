@@ -4,7 +4,7 @@ library(data.table)
 library(dplyr)
 library(tidyr)
 
-setwd("D:/Privat/Schulung/R/R_Clean/Assignment/")
+setwd("mycomputer/") # my computer folder
 url <-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(url,"Dataset.zip" )
 unzip("Dataset.zip") 
